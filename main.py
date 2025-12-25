@@ -25,7 +25,7 @@ def main():
         return
 
     now = datetime.now()
-    end_year = args.end_date or (now + 10)
+    end_year = args.end_date or (now.year + 10)
     ida.end_date = datetime(end_year, now.month, now.day, now.hour, now.minute, now.second).strftime("%Y-%m-%d %H:%M:%S")
 
     ida.generate_license_file()
